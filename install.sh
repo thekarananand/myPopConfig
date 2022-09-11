@@ -76,9 +76,19 @@ echo "Install Flatpak Apps"
 echo "[COMMAND] : flatpak install com.mattjakeman.ExtensionManager com.github.carlos157oliveira.Calculus com.github.hugolabe.Wike org.onlyoffice.desktopeditors -y" >> logs
 echo "" >> logs
 flatpak install com.mattjakeman.ExtensionManager com.github.carlos157oliveira.Calculus com.github.hugolabe.Wike org.onlyoffice.desktopeditors -y >> logs
+
 echo "---------------------------------------------------------------------------------------" >> logs
 
-echo "Installing Extenstions"
+echo "Disabling Old Extenstions"
+
+gnome-extentions disable pop-cosmic@system76.com
+gnome-extentions disable cosmic-dock@system76.com
+gnome-extentions disable cosmic-workspace@system76.com
+gnome-extentions disable popx11gestures@system76.com
+
+echo "---------------------------------------------------------------------------------------" >> logs
+
+echo "Installing New Extenstions"
 
 echo "[COMMAND] : mkdir /home/thekarananand/.local/share/gnome-shell/extensions" >> logs
 echo "[COMMAND] : cd extensions" >> logs
@@ -96,6 +106,8 @@ echo "[COMMAND] : killall -3 gnome-shell" >> logs
 killall -3 gnome-shell
 echo "---------------------------------------------------------------------------------------" >> logs
 
+echo "Enabling New Extenstions"
+
 gnome-extensions enable blur-my-shell@aunetx
 gnome-extensions enable date-menu-formatter@marcinjakubowski.github.com
 gnome-extensions enable drive-menu@gnome-shell-extensions.gcampax.github.com
@@ -104,5 +116,13 @@ gnome-extensions enable lockkeys@vaina.lt
 gnome-extensions enable theme-switcher@fthx
 gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
 gnome-extensions enable x11gestures@joseexposito.github.io
+echo "---------------------------------------------------------------------------------------" >> logs
+
+echo "Rebooting Gnome Shell"
+
+echo "[COMMAND] : killall -3 gnome-shell" >> logs
+
+killall -3 gnome-shell
+echo "---------------------------------------------------------------------------------------" >> logs
 
 neofetch
