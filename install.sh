@@ -67,9 +67,9 @@ sudo nala update && sudo nala upgrade -y >> logs
 echo "---------------------------------------------------------------------------------------" >> logs
 
 echo "Installing Apps"
-echo "[COMMAND] : sudo nala install neofetch htop ubuntu-restricted-extras code telegrm-desktop discord gnome-software qbittorrent inkscape vlc  -y" >> logs
+echo "[COMMAND] : sudo nala install neofetch htop ubuntu-restricted-extras code telegrm-desktop discord gnome-software qbittorrent inkscape vlc geg -y" >> logs
 echo "" >> logs
-sudo nala install neofetch htop ubuntu-restricted-extras code telegrm-desktop discord gnome-software qbittorrent inkscape vlc  -y >> logs
+sudo nala install neofetch htop ubuntu-restricted-extras code telegrm-desktop discord gnome-software qbittorrent inkscape vlc geg -y >> logs
 echo "---------------------------------------------------------------------------------------" >> logs
 
 echo "Install Flatpak Apps"
