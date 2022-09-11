@@ -112,6 +112,8 @@ echo "--------------------------------------------------------------------------
 
 echo "Enabling New Extenstions"
 
+flatpak run com.mattjakeman.ExtensionManager
+
 gnome-extensions enable blur-my-shell@aunetx
 gnome-extensions enable date-menu-formatter@marcinjakubowski.github.com
 gnome-extensions enable drive-menu@gnome-shell-extensions.gcampax.github.com
@@ -121,7 +123,12 @@ gnome-extensions enable theme-switcher@fthx
 gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
 gnome-extensions enable x11gestures@joseexposito.github.io
 
-flatpak run com.mattjakeman.ExtensionManager
+echo "Rebooting Gnome Shell"
+
+echo "[COMMAND] : killall -3 gnome-shell" >> logs
+
+killall -3 gnome-shell
+echo "---------------------------------------------------------------------------------------" >> logs
 
 gnome-extensions prefs x11gestures@joseexposito.github.io
 gnome-extensions prefs lockkeys@vaina.lt
