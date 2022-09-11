@@ -78,7 +78,7 @@ echo "" >> logs
 sudo nala install neofetch htop code telegram-desktop discord gnome-software gnome-shell-extensions qbittorrent inkscape vlc geg -y >> logs
 echo "---------------------------------------------------------------------------------------" >> logs
 
-echo "Install Flatpak Apps"
+echo "Installing Flatpak Apps"
 echo "[COMMAND] : flatpak install com.mattjakeman.ExtensionManager com.github.carlos157oliveira.Calculus com.github.hugolabe.Wike org.onlyoffice.desktopeditors -y" >> logs
 echo "" >> logs
 flatpak install com.mattjakeman.ExtensionManager com.github.carlos157oliveira.Calculus com.github.hugolabe.Wike org.onlyoffice.desktopeditors -y >> logs
