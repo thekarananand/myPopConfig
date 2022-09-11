@@ -96,14 +96,13 @@ echo "[COMMAND] : killall -3 gnome-shell" >> logs
 killall -3 gnome-shell
 echo "---------------------------------------------------------------------------------------" >> logs
 
-gnome-shell-extension-tool enable blur-my-shell@aunetx
-gnome-shell-extension-tool enable date-menu-formatter@marcinjakubowski.github.com
-gnome-shell-extension-tool enable drive-menu@gnome-shell-extensions.gcampax.github.com
-gnome-shell-extension-tool enable just-perfection-desktop@just-perfection
-gnome-shell-extension-tool enable lockkeys@vaina.lt
-gnome-shell-extension-tool enable theme-switcher@fthx
-gnome-shell-extension-tool enable user-theme@gnome-shell-extensions.gcampax.github.com
-gnome-shell-extension-tool enable x11gestures@joseexposito.github.io
-
+gnome-extensions enable blur-my-shell@aunetx
+gnome-extensions enable date-menu-formatter@marcinjakubowski.github.com
+gnome-extensions enable drive-menu@gnome-shell-extensions.gcampax.github.com
+gnome-extensions enable just-perfection-desktop@just-perfection
+gnome-extensions enable lockkeys@vaina.lt
+gnome-extensions enable theme-switcher@fthx
+gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
+gnome-extensions enable x11gestures@joseexposito.github.io
 
 neofetch
