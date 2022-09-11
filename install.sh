@@ -50,9 +50,9 @@ sudo nala clean >> logs
 
 echo "cmd 2"
 
-echo "[COMMAND] : sudo nala autoremove " >> logs
+echo "[COMMAND] : sudo nala autoremove --assume-yes" >> logs
 echo "" >> logs
-sudo nala autoremove >> logs
+sudo nala autoremove --assume-yes>> logs
 
 echo "---------------------------------------------------------------------------------------" >> logs
 
