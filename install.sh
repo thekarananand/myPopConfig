@@ -68,9 +68,9 @@ sudo nala update && sudo nala upgrade -y >> logs
 echo "---------------------------------------------------------------------------------------" >> logs
 
 echo "Installing Apps"
-echo "[COMMAND] : sudo nala install neofetch htop ubuntu-restricted-extras code telegram-desktop discord gnome-software qbittorrent inkscape vlc geg -y" >> logs
+echo "[COMMAND] : sudo nala install neofetch htop ubuntu-restricted-extras code telegram-desktop discord gnome-software gnome-shell-extensions qbittorrent inkscape vlc geg -y" >> logs
 echo "" >> logs
-sudo nala install neofetch htop ubuntu-restricted-extras code telegram-desktop discord gnome-software qbittorrent inkscape vlc geg -y >> logs
+sudo nala install neofetch htop ubuntu-restricted-extras code telegram-desktop discord gnome-software gnome-shell-extensions qbittorrent inkscape vlc geg -y >> logs
 echo "---------------------------------------------------------------------------------------" >> logs
 
 echo "Install Flatpak Apps"
@@ -84,7 +84,7 @@ echo "Disabling Old Extenstions"
 
 gnome-extensions disable pop-cosmic@system76.com
 gnome-extensions disable cosmic-dock@system76.com
-gnome-extensions disable cosmic-workspace@system76.com
+gnome-extensions disable cosmic-workspaces@system76.com
 gnome-extensions disable popx11gestures@system76.com
 
 echo "---------------------------------------------------------------------------------------" >> logs
