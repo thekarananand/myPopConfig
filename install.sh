@@ -117,6 +117,14 @@ gnome-extensions enable lockkeys@vaina.lt
 gnome-extensions enable theme-switcher@fthx
 gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
 gnome-extensions enable x11gestures@joseexposito.github.io
+
+flatpak run com.mattjakeman.ExtensionManager
+
+gnome-extensions prefs x11gestures@joseexposito.github.io
+gnome-extensions prefs lockkeys@vaina.lt
+gnome-extensions prefs date-menu-formatter@marcinjakubowski.github.com
+gnome-extensions prefs just-perfection-desktop@just-perfection
+
 echo "---------------------------------------------------------------------------------------" >> logs
 
 echo "Rebooting Gnome Shell"
