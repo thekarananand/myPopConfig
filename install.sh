@@ -68,6 +68,9 @@ sudo nala update && sudo nala upgrade -y >> logs
 echo "---------------------------------------------------------------------------------------" >> logs
 
 echo "Installing Apps"
+
+sudo nala install ubuntu-restricted-extras -y
+
 echo "[COMMAND] : sudo nala install neofetch htop ubuntu-restricted-extras code telegram-desktop discord gnome-software gnome-shell-extensions qbittorrent inkscape vlc geg -y" >> logs
 echo "" >> logs
 sudo nala install neofetch htop ubuntu-restricted-extras code telegram-desktop discord gnome-software gnome-shell-extensions qbittorrent inkscape vlc geg -y >> logs
