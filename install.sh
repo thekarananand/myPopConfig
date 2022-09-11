@@ -67,15 +67,15 @@ sudo nala update && sudo nala upgrade -y >> logs
 echo "---------------------------------------------------------------------------------------" >> logs
 
 echo "Installing Apps"
-echo "[COMMAND] : sudo nala install neofetch htop ubuntu-restricted-extras code telegram-desktop discord gnome-software qbittorrent inkscape vlc -y" >> logs
+echo "[COMMAND] : sudo nala install neofetch htop ubuntu-restricted-extras code telegrm-desktop discord gnome-software qbittorrent inkscape vlc  -y" >> logs
 echo "" >> logs
 sudo nala install neofetch htop ubuntu-restricted-extras code telegrm-desktop discord gnome-software qbittorrent inkscape vlc  -y >> logs
 echo "---------------------------------------------------------------------------------------" >> logs
 
 echo "Install Flatpak Apps"
-echo "[COMMAND] : flatpak install com.mattjakeman.ExtensionManager com.github.carlos157oliveira.Calculus -y" >> logs
+echo "[COMMAND] : flatpak install com.mattjakeman.ExtensionManager com.github.carlos157oliveira.Calculus com.github.hugolabe.Wike org.onlyoffice.desktopeditors -y" >> logs
 echo "" >> logs
-flatpak install com.mattjakeman.ExtensionManager com.github.carlos157oliveira.Calculus -y >> logs
+flatpak install com.mattjakeman.ExtensionManager com.github.carlos157oliveira.Calculus com.github.hugolabe.Wike org.onlyoffice.desktopeditors -y >> logs
 echo "---------------------------------------------------------------------------------------" >> logs
 
 echo "Installing Extenstions"
