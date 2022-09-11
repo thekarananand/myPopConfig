@@ -97,7 +97,7 @@ echo "[COMMAND] : sudo grub-install" >> logs
 echo "" >> logs
 sudo grub-install >> logs
 echo "[COMMAND] : sudo cp /boot/grub/x86_64-efi/grub.efi /boot/efi/EFI/pop/grubx64.efi" >> logs
-sudo cp /boot/grub/x86_64-efi/grub.efi /boot/efi/EFI/BOOTLOADER/grubx64.efi
+sudo cp /boot/grub/x86_64-efi/grub.efi /boot/efi/EFI/pop/grubx64.efi
 echo "[COMMAND] : sudo grub-customizer" >> logs
 sudo grub-customizer >> logs
 echo "---------------------------------------------------------------------------------------" >> logs
