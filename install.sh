@@ -42,13 +42,9 @@ echo "--------------------------------------------------------------------------
 
 echo "Cleaning Up"
 
-echo "cmd 1"
-
 echo "[COMMAND] : sudo nala clean" >> logs
 echo "" >> logs
 sudo nala clean >> logs
-
-echo "cmd 2"
 
 echo "[COMMAND] : sudo nala autoremove --assume-yes" >> logs
 echo "" >> logs
