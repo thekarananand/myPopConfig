@@ -19,6 +19,13 @@ rm -f packages.microsoft.gpg
 
 echo "---------------------------------------------------------------------------------------" >> logs
 
+echo "Setting Up PPA for Grub-Customizer"
+
+echo "sudo add-apt-repository ppa:danielrichter2007/grub-customizer -y" >> logs
+
+sudo add-apt-repository ppa:danielrichter2007/grub-customizer -y >> logs
+echo "---------------------------------------------------------------------------------------" >> logs
+
 echo "Setting Up Flathub"
 
 echo "[COMMAND] : flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo" >> logs
@@ -73,9 +80,9 @@ echo "[COMMAND] : sudo nala install ubuntu-restricted-extras -y" >> logs
 sudo nala install ubuntu-restricted-extras -y
 echo "---------------------------------------------------------------------------------------" >> logs
 echo "Installing Apps"
-echo "[COMMAND] : sudo nala install neofetch htop code telegram-desktop discord gnome-software gnome-shell-extensions qbittorrent inkscape vlc geg -y" >> logs
-echo "" >> logs
-sudo nala install neofetch htop code telegram-desktop discord gnome-software gnome-shell-extensions qbittorrent inkscape vlc geg -y >> logs
+echo "[COMMAND] : " >> logs
+echo "sudo nala install neofetch htop code gnome-tweaks grub-customizer grub-efi grub2-common telegram-desktop discord gnome-software gnome-shell-extensions qbittorrent inkscape vlc geg -y " >> logs
+sudo nala install neofetch htop code gnome-tweaks grub-customizer grub-efi grub2-common telegram-desktop discord gnome-software gnome-shell-extensions qbittorrent inkscape vlc geg -y >> logs
 echo "---------------------------------------------------------------------------------------" >> logs
 
 echo "Installing Flatpak Apps"
@@ -83,6 +90,16 @@ echo "[COMMAND] : flatpak install com.mattjakeman.ExtensionManager com.github.ca
 echo "" >> logs
 flatpak install com.mattjakeman.ExtensionManager com.github.carlos157oliveira.Calculus com.github.hugolabe.Wike org.onlyoffice.desktopeditors -y >> logs
 
+echo "---------------------------------------------------------------------------------------" >> logs
+
+echo "Building Grub Bootloader"
+echo "[COMMAND] : sudo grub-install" >> logs
+echo "" >> logs
+sudo grub-install >> logs
+echo "[COMMAND] : sudo cp /boot/grub/x86_64-efi/grub.efi /boot/efi/EFI/BOOTLOADER/grubx64.efi" >> logs
+sudo cp /boot/grub/x86_64-efi/grub.efi /boot/efi/EFI/BOOTLOADER/grubx64.efi
+echo "[COMMAND] : sudo grub-customizer" >> logs
+sudo grub-customizer >> logs
 echo "---------------------------------------------------------------------------------------" >> logs
 
 echo "Disabling Old Extenstions"
