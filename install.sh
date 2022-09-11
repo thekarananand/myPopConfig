@@ -17,7 +17,7 @@ sudo nala list --upgradable
 
 sudo nala update && sudo nala upgrade -y
 
-sudo nala install neofetch htop ubuntu-restricted-extras code telegrm-desktop discord gnome-software qbittorrent inkscape vlc  -y
+sudo nala install neofetch htop ubuntu-restricted-extras code telegram-desktop discord gnome-software qbittorrent inkscape vlc  -y
 
 flatpak install com.mattjakeman.ExtensionManager com.github.carlos157oliveira.Calculus -y
 
