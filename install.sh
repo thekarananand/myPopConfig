@@ -42,13 +42,18 @@ echo "--------------------------------------------------------------------------
 
 echo "Cleaning Up"
 
+echo "cmd 1"
+
 echo "[COMMAND] : sudo nala clean" >> logs
 echo "" >> logs
 sudo nala clean >> logs
 
+echo "cmd 2"
+
 echo "[COMMAND] : sudo nala autoremove " >> logs
 echo "" >> logs
 sudo nala autoremove >> logs
+
 echo "---------------------------------------------------------------------------------------" >> logs
 
 echo "Updating .deb Packages"
@@ -81,10 +86,10 @@ echo "--------------------------------------------------------------------------
 
 echo "Disabling Old Extenstions"
 
-gnome-extentions disable pop-cosmic@system76.com
-gnome-extentions disable cosmic-dock@system76.com
-gnome-extentions disable cosmic-workspace@system76.com
-gnome-extentions disable popx11gestures@system76.com
+gnome-extensions disable pop-cosmic@system76.com
+gnome-extensions disable cosmic-dock@system76.com
+gnome-extensions disable cosmic-workspace@system76.com
+gnome-extensions disable popx11gestures@system76.com
 
 echo "---------------------------------------------------------------------------------------" >> logs
 
