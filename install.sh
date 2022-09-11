@@ -13,9 +13,9 @@ sudo nala remove --purge libreoffice* gnome-weather gnome-calendar gnome-contact
 sudo nala clean
 sudo nala autoremove
 
-sudo nala list --upgradable
-
 sudo nala update && sudo nala upgrade -y
+
+sudo nala list --upgradable
 
 sudo nala install neofetch htop ubuntu-restricted-extras code telegram-desktop discord gnome-software qbittorrent inkscape vlc  -y
 
