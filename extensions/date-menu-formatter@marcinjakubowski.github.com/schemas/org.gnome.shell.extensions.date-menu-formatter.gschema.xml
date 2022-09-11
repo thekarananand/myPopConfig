@@ -1,0 +1,36 @@
+<schemalist gettext-domain="gnome-shell-extensions">
+  <schema id="org.gnome.shell.extensions.date-menu-formatter"
+      path="/org/gnome/shell/extensions/date-menu-formatter/">
+
+    <key type="s" name="pattern">
+        <default>"EEE, MMM d  H : mm"</default>
+        <summary>Date format pattern</summary>
+        <description></description>
+    </key>
+    <key type="s" name="custom-locale">
+        <default>""</default>
+        <summary>Custom locale</summary>
+        <description></description>
+    </key>        
+    <key type="b" name="use-default-locale">
+        <default>true</default>
+        <summary>Should default system locale be used</summary>
+        <description></description>
+    </key>    
+    <key type="b" name="remove-messages-indicator">
+        <default>false</default>
+        <summary>Should unread messages indicator be removed</summary>
+        <description></description>
+    </key>    
+    <key type="b" name="apply-all-panels">
+        <default>false</default>
+        <summary>Should extension modify all Dash To Panel panels</summary>
+        <description></description>
+    </key>        
+    <key type="i" name="font-size">
+        <default>10</default>
+        <summary>Font size</summary>
+        <description></description>
+    </key>    
+  </schema>
+</schemalist>
