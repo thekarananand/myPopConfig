@@ -21,7 +21,7 @@ echo "--------------------------------------------------------------------------
 
 echo "Setting Up Flathub"
 
-echo "[COMMAND] : flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo "
+echo "[COMMAND] : flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo" >> logs
 flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo >> logs
 
 echo "---------------------------------------------------------------------------------------" >> logs
@@ -67,9 +67,9 @@ sudo nala update && sudo nala upgrade -y >> logs
 echo "---------------------------------------------------------------------------------------" >> logs
 
 echo "Installing Apps"
-echo "[COMMAND] : sudo nala install neofetch htop ubuntu-restricted-extras code telegrm-desktop discord gnome-software qbittorrent inkscape vlc geg -y" >> logs
+echo "[COMMAND] : sudo nala install neofetch htop ubuntu-restricted-extras code telegram-desktop discord gnome-software qbittorrent inkscape vlc geg -y" >> logs
 echo "" >> logs
-sudo nala install neofetch htop ubuntu-restricted-extras code telegrm-desktop discord gnome-software qbittorrent inkscape vlc geg -y >> logs
+sudo nala install neofetch htop ubuntu-restricted-extras code telegram-desktop discord gnome-software qbittorrent inkscape vlc geg -y >> logs
 echo "---------------------------------------------------------------------------------------" >> logs
 
 echo "Install Flatpak Apps"
