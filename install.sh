@@ -1,4 +1,5 @@
 sudo date >> logs
+sudo apt remove --purge pop-shop-y
 echo "---------------------------------------------------------------------------------------" >> logs
 echo "Installing nala"
 
@@ -69,9 +70,9 @@ echo "--------------------------------------------------------------------------
 
 echo "Updating .deb Packages"
 
-echo "[COMMAND] : sudo nala update && sudo nala upgrade -y" >> logs
-echo "" >> logs
-sudo nala update && sudo nala upgrade -y >> logs
+# echo "[COMMAND] : sudo nala update && sudo nala upgrade -y" >> logs
+# echo "" >> logs
+# sudo nala update && sudo nala upgrade -y >> logs
 
 echo "[COMMAND] : nala list --upgradable" >> logs
 echo "" >> logs
@@ -89,8 +90,8 @@ sudo nala install ubuntu-restricted-extras -y
 echo "---------------------------------------------------------------------------------------" >> logs
 echo "Installing Apps"
 echo "[COMMAND] : " >> logs
-echo "sudo nala install neofetch htop preload tlp code gnome-tweaks grub-customizer grub-efi grub2-common telegram-desktop discord gnome-software gnome-shell-extensions qbittorrent inkscape vlc geg -y " >> logs
-sudo nala install neofetch htop preload tlp code gnome-tweaks grub-customizer grub-efi grub2-common telegram-desktop discord gnome-software gnome-shell-extensions qbittorrent inkscape vlc geg -y >> logs
+echo "sudo nala install neofetch htop preload tlp code pop-shop gnome-tweaks grub-customizer grub-efi grub2-common telegram-desktop discord gnome-software gnome-shell-extensions qbittorrent inkscape vlc geg -y " >> logs
+sudo nala install neofetch htop preload tlp code pop-shop gnome-tweaks grub-customizer grub-efi grub2-common telegram-desktop discord gnome-software gnome-shell-extensions qbittorrent inkscape vlc geg -y >> logs
 echo "---------------------------------------------------------------------------------------" >> logs
 
 echo "Installing Flatpak Apps"
@@ -99,7 +100,6 @@ echo "" >> logs
 flatpak install com.mattjakeman.ExtensionManager com.github.carlos157oliveira.Calculus com.github.hugolabe.Wike org.onlyoffice.desktopeditors -y
 
 echo "---------------------------------------------------------------------------------------" >> logs
-
 
 echo "Setting Up tlp.service"
 echo "[COMMAND] : sudo systemctl enable tlp.service" >> logs
