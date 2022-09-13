@@ -1,5 +1,5 @@
 sudo date >> logs
-sudo apt remove --purge pop-shop-y
+sudo apt remove --purge pop-shop -y
 echo "---------------------------------------------------------------------------------------" >> logs
 echo "Installing nala"
 
