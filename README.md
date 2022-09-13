@@ -1,5 +1,5 @@
 # myPopConfig
-This is a Script to Install and Configure Pop!_OS to how i like to it use!!...
+This is a Quick Script to Install and Configure Pop!_OS to how i like to it use!!...
 
 ## Get Started
 
