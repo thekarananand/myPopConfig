@@ -177,10 +177,17 @@ killall -3 gnome-shell
 echo "---------------------------------------------------------------------------------------" >> logs
 
 gnome-extensions prefs x11gestures@joseexposito.github.io
+clear
+read -p "Press any key to continue ..."
 gnome-extensions prefs lockkeys@vaina.lt
+clear
+read -p "Press any key to continue ..."
 gnome-extensions prefs date-menu-formatter@marcinjakubowski.github.com
+clear
+read -p "Press any key to continue ..."
 gnome-extensions prefs just-perfection-desktop@just-perfection
-
+clear
+read -p "Press any key to continue ..."
 echo "---------------------------------------------------------------------------------------" >> logs
 
 echo "Rebooting Gnome Shell"
