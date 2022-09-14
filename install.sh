@@ -1,5 +1,4 @@
 sudo date >> logs
-sudo apt remove --purge pop-shop -y
 echo "---------------------------------------------------------------------------------------" >> logs
 echo "Installing nala"
 
@@ -90,8 +89,8 @@ sudo nala install ubuntu-restricted-extras -y
 echo "---------------------------------------------------------------------------------------" >> logs
 echo "Installing Apps"
 echo "[COMMAND] : " >> logs
-echo "sudo nala install neofetch htop preload tlp code pop-shop gnome-tweaks grub-customizer grub-efi grub2-common telegram-desktop discord gnome-software gnome-shell-extensions qbittorrent inkscape vlc geg -y " >> logs
-sudo nala install neofetch htop preload tlp code pop-shop gnome-tweaks grub-customizer grub-efi grub2-common telegram-desktop discord gnome-software gnome-shell-extensions qbittorrent inkscape vlc geg -y >> logs
+echo "sudo nala install neofetch htop preload tlp code gnome-tweaks grub-customizer grub-efi grub2-common telegram-desktop discord gnome-software gnome-shell-extensions qbittorrent inkscape vlc geg -y " >> logs
+sudo nala install neofetch htop preload tlp code gnome-tweaks grub-customizer grub-efi grub2-common telegram-desktop discord gnome-software gnome-shell-extensions qbittorrent inkscape vlc geg -y >> logs
 echo "---------------------------------------------------------------------------------------" >> logs
 
 echo "Installing Flatpak Apps"
