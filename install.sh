@@ -95,9 +95,9 @@ sudo nala install neofetch htop preload tlp code pop-shop gnome-tweaks grub-cust
 echo "---------------------------------------------------------------------------------------" >> logs
 
 echo "Installing Flatpak Apps"
-echo "[COMMAND] : flatpak install com.mattjakeman.ExtensionManager com.github.carlos157oliveira.Calculus com.github.hugolabe.Wike org.onlyoffice.desktopeditors -y" >> logs
+echo "[COMMAND] : flatpak install flathub com.mattjakeman.ExtensionManager com.github.carlos157oliveira.Calculus com.github.hugolabe.Wike org.onlyoffice.desktopeditors -y" >> logs
 echo "" >> logs
-flatpak install com.mattjakeman.ExtensionManager com.github.carlos157oliveira.Calculus com.github.hugolabe.Wike org.onlyoffice.desktopeditors -y
+flatpak install flathub com.mattjakeman.ExtensionManager com.github.carlos157oliveira.Calculus com.github.hugolabe.Wike org.onlyoffice.desktopeditors -y
 
 echo "---------------------------------------------------------------------------------------" >> logs
 
@@ -140,13 +140,13 @@ echo "--------------------------------------------------------------------------
 
 echo "Installing New Extenstions"
 
-echo "[COMMAND] : mkdir /home/thekarananand/.local/share/gnome-shell/extensions" >> logs
+echo "[COMMAND] : mkdir /home/$USER/.local/share/gnome-shell/extensions" >> logs
 echo "[COMMAND] : cd extensions" >> logs
-echo "[COMMAND] : cp * /home/thekarananand/.local/share/gnome-shell/extensions -r" >> logs
+echo "[COMMAND] : cp * /home/$USER/.local/share/gnome-shell/extensions -r" >> logs
 
-mkdir /home/thekarananand/.local/share/gnome-shell/extensions
+mkdir /home/$USER/.local/share/gnome-shell/extensions
 cd extensions
-cp * /home/thekarananand/.local/share/gnome-shell/extensions -r >> logs
+cp * /home/$USER/.local/share/gnome-shell/extensions -r >> logs
 echo "---------------------------------------------------------------------------------------" >> logs
 
 echo "Rebooting Gnome Shell"
