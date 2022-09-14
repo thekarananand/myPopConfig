@@ -1,6 +1,3 @@
-touch logs
-script logs
-
 echo "+-------------------+"
 echo "|  Installing nala  |"
 echo "+-------------------+"
