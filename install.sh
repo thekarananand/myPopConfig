@@ -1,4 +1,5 @@
-sudo echo "+-------------------+"
+sudo apt remove pop-shop -y
+echo "+-------------------+"
 echo "|  Installing nala  |"
 echo "+-------------------+"
 echo ""
@@ -107,9 +108,9 @@ echo "+-------------------+"
 echo "|  Installing Apps  |"
 echo "+-------------------+"
 echo ""
-echo "[COMMAND] : sudo nala install neofetch htop preload tlp code gnome-tweaks grub-customizer grub-efi grub2-common telegram-desktop discord gnome-software gnome-shell-extensions qbittorrent inkscape vlc geg -y " 
+echo "[COMMAND] : sudo nala install pop-shop neofetch htop preload tlp code gnome-tweaks grub-customizer grub-efi grub2-common telegram-desktop discord gnome-software gnome-shell-extensions qbittorrent inkscape vlc geg -y " 
 echo "" 
-sudo nala install neofetch htop preload tlp code gnome-tweaks grub-customizer grub-efi grub2-common telegram-desktop discord gnome-software gnome-shell-extensions qbittorrent inkscape vlc geg -y 
+sudo nala install pop-shop neofetch htop preload tlp code gnome-tweaks grub-customizer grub-efi grub2-common telegram-desktop discord gnome-software gnome-shell-extensions qbittorrent inkscape vlc geg -y 
 echo ""
 echo ""
 
