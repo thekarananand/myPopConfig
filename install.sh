@@ -87,9 +87,9 @@ echo ""
 echo "[COMMAND] : nala list --upgradable"
 echo ""
 nala list --upgradable 
-echo "[COMMAND] : sudo nala update && nala upgrade -y" 
+echo "[COMMAND] : sudo nala update && sudo nala upgrade -y" 
 echo "" 
-sudo nala update && nala upgrade -y 
+sudo nala update && sudo nala upgrade -y 
 echo ""
 echo ""
 
