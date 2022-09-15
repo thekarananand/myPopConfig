@@ -61,9 +61,9 @@ echo "+--------------------------------------+"
 echo "|  Removing Unnecessary .deb Packages  |"
 echo "+--------------------------------------+"
 echo ""
-echo "[COMMAND] : nala remove --purge libreoffice* gnome-weather gnome-calendar gnome-contacts totem geary seahorse -y " 
+echo "[COMMAND] : sudo nala remove --purge libreoffice* gnome-weather gnome-calendar gnome-contacts totem geary seahorse -y " 
 echo "" 
-nala remove --purge libreoffice* gnome-weather gnome-calendar gnome-contacts totem geary seahorse -y 
+sudo nala remove --purge libreoffice* gnome-weather gnome-calendar gnome-contacts totem geary seahorse -y 
 echo ""
 echo ""
 
@@ -71,12 +71,12 @@ echo "+---------------+"
 echo "|  Cleaning Up  |"
 echo "+---------------+"
 echo ""
-echo "[COMMAND] : nala clean" 
+echo "[COMMAND] : sudo nala clean" 
 echo "" 
-nala clean 
-echo "[COMMAND] : nala autoremove --assume-yes" 
+sudo nala clean 
+echo "[COMMAND] : sudo nala autoremove --assume-yes" 
 echo "" 
-nala autoremove --assume-yes
+sudo nala autoremove --assume-yes
 echo ""
 echo ""
 
