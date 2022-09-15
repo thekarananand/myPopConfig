@@ -84,7 +84,9 @@ echo ""
 echo "+--------------------------+"
 echo "|  Updating .deb Packages  |"
 echo "+--------------------------+"
-echo ""
+echo "[COMMAND] : sudo nala update && sudo nala upgrade -y" 
+echo "" 
+sudo nala update && sudo nala upgrade -y 
 echo "[COMMAND] : nala list --upgradable"
 echo ""
 nala list --upgradable 
