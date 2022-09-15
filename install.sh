@@ -127,6 +127,10 @@ echo "+--------------------------+"
 echo "|  Setting Up tlp.service  |"
 echo "+--------------------------+"
 echo ""
+echo "[COMMAND] : sudo tlp start" 
+echo "" 
+sudo tlp start
+echo ""
 echo "[COMMAND] : sudo systemctl enable tlp.service" 
 echo "" 
 sudo systemctl enable tlp.service 
