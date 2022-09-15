@@ -1,10 +1,10 @@
-echo "+-------------------+"
+sudo echo "+-------------------+"
 echo "|  Installing nala  |"
 echo "+-------------------+"
 echo ""
-echo "[COMMAND] : apt-get install nala -y"
+echo "[COMMAND] : sudo apt-get install nala -y"
 echo ""
-apt-get install nala -y
+sudo apt-get install nala -y
 echo ""
 echo ""
 
@@ -15,12 +15,12 @@ echo ""
 echo "[COMMAND] : wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg"
 echo ""
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
-echo "[COMMAND] : install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg"
+echo "[COMMAND] : sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg"
 echo ""
-install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
-echo "[COMMAND] : sh -c 'echo \"deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main\" > /etc/apt/sources.list.d/vscode.list'"
+sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
+echo "[COMMAND] : sudo sh -c 'echo \"deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main\" > /etc/apt/sources.list.d/vscode.list'"
 echo ""
-sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
+sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
 echo "[COMMAND] : rm -f packages.microsoft.gpg"
 echo ""
 rm -f packages.microsoft.gpg
@@ -31,9 +31,9 @@ echo "+--------------------------------------+"
 echo "|  Setting Up PPA for Grub-Customizer  |"
 echo "+--------------------------------------+"
 echo ""
-echo "[COMMAND] : add-apt-repository ppa:danielrichter2007/grub-customizer -y"
+echo "[COMMAND] : sudo add-apt-repository ppa:danielrichter2007/grub-customizer -y"
 echo ""
-add-apt-repository ppa:danielrichter2007/grub-customizer -y
+sudo add-apt-repository ppa:danielrichter2007/grub-customizer -y
 echo ""
 echo ""
 
@@ -87,9 +87,9 @@ echo ""
 echo "[COMMAND] : nala list --upgradable"
 echo ""
 nala list --upgradable 
-echo "[COMMAND] : nala update && nala upgrade -y" 
+echo "[COMMAND] : sudo nala update && nala upgrade -y" 
 echo "" 
-nala update && nala upgrade -y 
+sudo nala update && nala upgrade -y 
 echo ""
 echo ""
 
@@ -97,9 +97,9 @@ echo "+---------------------+"
 echo "|  Installing Codecs  |"
 echo "+---------------------+"
 echo ""
-echo "[COMMAND] : nala install ubuntu-restricted-extras -y" 
+echo "[COMMAND] : sudo nala install ubuntu-restricted-extras -y" 
 echo "" 
-nala install ubuntu-restricted-extras -y
+sudo nala install ubuntu-restricted-extras -y
 echo ""
 echo ""
 
@@ -107,9 +107,9 @@ echo "+-------------------+"
 echo "|  Installing Apps  |"
 echo "+-------------------+"
 echo ""
-echo "[COMMAND] : nala install neofetch htop preload tlp code gnome-tweaks grub-customizer grub-efi grub2-common telegram-desktop discord gnome-software gnome-shell-extensions qbittorrent inkscape vlc geg -y " 
+echo "[COMMAND] : sudo nala install neofetch htop preload tlp code gnome-tweaks grub-customizer grub-efi grub2-common telegram-desktop discord gnome-software gnome-shell-extensions qbittorrent inkscape vlc geg -y " 
 echo "" 
-nala install neofetch htop preload tlp code gnome-tweaks grub-customizer grub-efi grub2-common telegram-desktop discord gnome-software gnome-shell-extensions qbittorrent inkscape vlc geg -y 
+sudo nala install neofetch htop preload tlp code gnome-tweaks grub-customizer grub-efi grub2-common telegram-desktop discord gnome-software gnome-shell-extensions qbittorrent inkscape vlc geg -y 
 echo ""
 echo ""
 
@@ -127,9 +127,9 @@ echo "+--------------------------+"
 echo "|  Setting Up tlp.service  |"
 echo "+--------------------------+"
 echo ""
-echo "[COMMAND] : systemctl enable tlp.service" 
+echo "[COMMAND] : sudo systemctl enable tlp.service" 
 echo "" 
-systemctl enable tlp.service 
+sudo systemctl enable tlp.service 
 echo ""
 echo ""
 
@@ -137,23 +137,23 @@ echo "+----------------------------+"
 echo "|  Building Grub Bootloader  |"
 echo "+----------------------------+"
 echo ""
-echo "[COMMAND] : grub-install" 
+echo "[COMMAND] : sudo grub-install" 
 echo "" 
-grub-install 
+sudo grub-install 
 
 echo "+----------------------------------------------------+"
 echo "|  Tweaking & Installing Themes for Grub Bootloader  |"
 echo "+----------------------------------------------------+"
 echo "" 
-cp /boot/grub/x86_64-efi/grub.efi /boot/efi/EFI/pop/grubx64.efi
+sudo cp /boot/grub/x86_64-efi/grub.efi /boot/efi/EFI/pop/grubx64.efi
 
 mkdir -p "/boot/grub/themes/"
-cp -a ./grubthemes/* /boot/grub/themes/
+sudo cp -a ./grubthemes/* /boot/grub/themes/
 
-echo 'GRUB_TIMEOUT_STYLE="menu"' >> /etc/default/grub
-echo 'GRUB_TIMEOUT="10"' >> /etc/default/grub
-echo "GRUB_THEME=\"/boot/grub/themes/Decent/theme.txt\"" >> /etc/default/grub
-echo 'GRUB_GFXMODE="auto"' >> /etc/default/grub 
+sudo echo 'GRUB_TIMEOUT_STYLE="menu"' >> /etc/default/grub
+sudo echo 'GRUB_TIMEOUT="10"' >> /etc/default/grub
+sudo echo "GRUB_THEME=\"/boot/grub/themes/Decent/theme.txt\"" >> /etc/default/grub
+sudo echo 'GRUB_GFXMODE="auto"' >> /etc/default/grub 
 read -p "Press [ENTER] to Continue & Launch Grub Customizer ..."
 clear
 
