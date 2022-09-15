@@ -1,0 +1,28 @@
+NOTE : The Following Instruction(s) is OPTIONAL!
+
++-------------------+
+|  Just Perfection  |
++-------------------+
+
+In "Profile" Section, 
+
+ - User Overide, Set Shell Theme to "ON"
+   
+In "Visibility" Section,
+
+ - Set Activies Button to "OFF"
+ - Set World Clock to "OFF"
+ - Set Weather to "OFF"
+ - Set Event to "OFF"
+
+In "Behavior" Section,
+
+ - Set Window Demands Attention Focus to "OFF"
+ 
+In "Customize" Section,
+
+ - Set Clock Menu Position to "Right"
+ - Set Clock Menu Position Offset to "9"
+ - Set Notification Banner Position to "Top End"
+ - Set OSD Position to "Bottom Center"
+
