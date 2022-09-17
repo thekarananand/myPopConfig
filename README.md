@@ -26,7 +26,7 @@ clear && ./install.sh
 - Install `nala` (Frontend for `apt`)
 - Update .deb & Flatpak apps.
 - Set up Grub Bootloader for Multiboot.
-- Replace Libre-Office by Only-Office.
+- Replace Libre-Office with Only-Office.
 - Add Repositories and Install for
     - Visual Studio Code
     - Grub Customizer.
