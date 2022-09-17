@@ -1,3 +1,5 @@
+flatpak run com.mattjakeman.ExtensionManager
+
 gnome-extensions enable blur-my-shell@aunetx
 gnome-extensions enable date-menu-formatter@marcinjakubowski.github.com
 gnome-extensions enable drive-menu@gnome-shell-extensions.gcampax.github.com
