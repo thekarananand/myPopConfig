@@ -154,7 +154,7 @@ echo "+----------------------------------------------------+"
 echo "" 
 sudo cp /boot/grub/x86_64-efi/grub.efi /boot/efi/EFI/pop/grubx64.efi
 
-mkdir -p "/boot/grub/themes/"
+sudo mkdir -p "/boot/grub/themes/"
 sudo cp -a ./grubthemes/* /boot/grub/themes/
 
 sudo echo 'GRUB_TIMEOUT_STYLE="menu"' >> /etc/default/grub
