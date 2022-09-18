@@ -11,6 +11,7 @@ echo ""
 echo "+--------------------------+"
 echo "|  Updating .deb Packages  |"
 echo "+--------------------------+"
+echo ""
 echo "[COMMAND] : sudo nala update && sudo nala upgrade -y" 
 echo "" 
 sudo nala update && sudo nala upgrade -y 
