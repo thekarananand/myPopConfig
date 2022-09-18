@@ -93,27 +93,27 @@ cd txtmessage
 gnome-extensions prefs x11gestures@joseexposito.github.io
 clear
 cat x11gestures.txt
-read -p "Press any key to continue ..."
+read -p "Press [ENTER] to continue ..."
 
 gnome-extensions prefs lockkeys@vaina.lt
 clear
 cat lockkeys.txt
-read -p "Press any key to continue ..."
+read -p "Press [ENTER] to continue ..."
 
 gnome-extensions prefs date-menu-formatter@marcinjakubowski.github.com
 clear
 cat date-menu-formatter.txt
-read -p "Press any key to continue ..."
+read -p "Press [ENTER] to continue ..."
 
 gnome-extensions prefs just-perfection-desktop@just-perfection
 clear
 cat just-perfection.txt
-read -p "Press any key to continue ..."
+read -p "Press [ENTER] to continue ..."
 
 gnome-extensions prefs ding@rastersoft.com
 clear
 cat ding.txt
-read -p "Press any key to continue ..."
+read -p "Press [ENTER] to continue ..."
 
 cd ..
 cd scripts
