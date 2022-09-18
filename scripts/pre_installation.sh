@@ -63,7 +63,7 @@ echo "+--------------------------------------+"
 echo ""
 echo "[COMMAND] : sudo apt remove --purge libreoffice* gnome-weather gnome-calendar gnome-contacts totem geary seahorse -y " 
 echo "" 
-sudo nala remove --purge libreoffice* gnome-weather gnome-calendar gnome-contacts totem geary seahorse -y 
+sudo apt remove --purge libreoffice* gnome-weather gnome-calendar gnome-contacts totem geary seahorse -y 
 echo ""
 echo ""
 
@@ -73,9 +73,9 @@ echo "+---------------+"
 echo ""
 echo "[COMMAND] : sudo apt clean" 
 echo "" 
-sudo nala clean 
+sudo apt clean 
 echo "[COMMAND] : sudo apt autoremove --assume-yes" 
 echo "" 
-sudo nala autoremove --assume-yes
+sudo apt autoremove --assume-yes
 echo ""
 echo ""
