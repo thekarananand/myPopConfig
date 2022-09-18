@@ -1,0 +1,12 @@
++-------------------+
+|  Grub Customizer  |
++-------------------+
+
+Step 1 : In "List Configuration" tab, Configure the Boot Enteries.
+
+Step 2 : In "Appearance Settings" tab, Set a Custom Resolution & Select a Theme.
+
+               +------+
+Step 3 : Press | Save | then EXIT Grub Customizer Pop-up Window !!....
+               +------+
+               
