@@ -1,8 +1,0 @@
-NOTE : The Following Instruction(s) is OPTIONAL!
-
-+----------------+
-|  X11 Gestures  |
-+----------------+
-
- - SET Number of Fingers to "4"
-
