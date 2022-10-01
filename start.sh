@@ -64,11 +64,11 @@ sudo cp /boot/grub/x86_64-efi/grub.efi /boot/efi/EFI/pop/grubx64.efi
 sudo mkdir -p "/boot/grub/themes/"
 sudo cp -a ./grubthemes/* /boot/grub/themes/
 
+clear
+
 cat ./txtmessage/grubCustomizer.txt
 echo "[COMMAND] : grub-customizer" 
 sudo grub-customizer >> null
-
-read -p "Press [ENTER] to continue"
 
 #---------------------------------------------------------------------------------------
 
@@ -110,8 +110,6 @@ killall -3 gnome-shell
 cd ..
 
 #---------------------------------------------------------------------------------------
-
-#THIS DOESN'T WORK
 
 flatpak run com.mattjakeman.ExtensionManager
 
