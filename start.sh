@@ -6,6 +6,11 @@ sudo nala remove --purge pop-shop libreoffice* gnome-weather gnome-calendar gnom
 
 #---------------------------------------------------------------------------------------
 
+sudo nala clean 
+sudo nala autoremove -y
+
+#---------------------------------------------------------------------------------------
+
 gnome-extensions disable pop-cosmic@system76.com
 gnome-extensions disable cosmic-dock@system76.com
 gnome-extensions disable cosmic-workspaces@system76.com
@@ -49,12 +54,6 @@ flatpak install flathub com.mattjakeman.ExtensionManager com.github.carlos157oli
 
 #---------------------------------------------------------------------------------------
 
-sudo nala clean 
-
-sudo nala autoremove -y
-
-#---------------------------------------------------------------------------------------
-
 sudo tlp start
 sudo systemctl enable tlp.service 
 
@@ -73,12 +72,8 @@ read -p "Press [ENTER] to continue"
 
 #---------------------------------------------------------------------------------------
 
-# THIS DOESN'T WORKS 
-
 mkdir extensions
 cd extensions
-
-
 
 wget https://extensions.gnome.org/extension-data/blur-my-shellaunetx.v43.shell-extension.zip
 wget https://extensions.gnome.org/extension-data/date-menu-formattermarcinjakubowski.github.com.v7.shell-extension.zip
@@ -89,7 +84,6 @@ wget https://extensions.gnome.org/extension-data/drive-menugnome-shell-extension
 wget https://extensions.gnome.org/extension-data/user-themegnome-shell-extensions.gcampax.github.com.v49.shell-extension.zip
 wget https://extensions.gnome.org/extension-data/x11gesturesjoseexposito.github.io.v14.shell-extension.zip
 
-
 unzip blur-my-shellaunetx.v43.shell-extension.zip -d ./blur-my-shell@aunetx/
 unzip date-menu-formattermarcinjakubowski.github.com.v7.shell-extension.zip -d ./date-menu-formatter@marcinjakubowski.github.com/
 unzip just-perfection-desktopjust-perfection.v22.shell-extension.zip -d ./just-perfection-desktop@just-perfection/
@@ -98,7 +92,6 @@ unzip lockkeysvaina.lt.v47.shell-extension.zip -d ./lockkeys@vaina.lt/
 unzip drive-menugnome-shell-extensions.gcampax.github.com.v51.shell-extension.zip -d ./drive-menu@gnome-shell-extensions.gcampax.github.com/
 unzip user-themegnome-shell-extensions.gcampax.github.com.v49.shell-extension.zip -d ./user-theme@gnome-shell-extensions.gcampax.github.com/
 unzip x11gesturesjoseexposito.github.io.v14.shell-extension.zip -d ./x11gestures@joseexposito.github.io/
-
 
 rm blur-my-shellaunetx.v43.shell-extension.zip
 rm date-menu-formattermarcinjakubowski.github.com.v7.shell-extension.zip
@@ -109,7 +102,6 @@ rm drive-menugnome-shell-extensions.gcampax.github.com.v51.shell-extension.zip
 rm user-themegnome-shell-extensions.gcampax.github.com.v49.shell-extension.zip
 rm x11gesturesjoseexposito.github.io.v14.shell-extension.zip
 
-
 mkdir /home/$USER/.local/share/gnome-shell/extensions
 cp * /home/$USER/.local/share/gnome-shell/extensions -r 
 
@@ -119,6 +111,9 @@ cd ..
 
 #---------------------------------------------------------------------------------------
 
+#THIS DOESN'T WORK
+
+flatpak run com.mattjakeman.ExtensionManager
 
 gnome-extensions enable blur-my-shell@aunetx
 gnome-extensions enable date-menu-formatter@marcinjakubowski.github.com
