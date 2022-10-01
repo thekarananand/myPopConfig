@@ -17,7 +17,7 @@ In "Visibility" Section,
 
 In "Behavior" Section,
 
- - Set Window Demands Attention Focus to "OFF"
+ - Set Window Demands Attention Focus to "ON"
  
 In "Customize" Section,
 
