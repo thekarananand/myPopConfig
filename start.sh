@@ -62,6 +62,8 @@ sudo cp /boot/grub/x86_64-efi/grub.efi /boot/efi/EFI/pop/grubx64.efi
 sudo mkdir -p "/boot/grub/themes/"
 sudo cp -a ./grubthemes/* /boot/grub/themes/
 
+sudo sed -i "s/Grub Bootloader/Hello, $USER/g"  /boot/grub/themes/sleek-dark/theme.txt
+
 clear
 
 cat ./txtmessage/grubCustomizer.txt
