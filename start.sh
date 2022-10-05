@@ -1,5 +1,3 @@
-# THIS WORKS !!...
-
 sudo apt-get install nala -y
 
 sudo nala remove --purge pop-shop libreoffice* gnome-weather gnome-calendar gnome-contacts totem geary seahorse -y 
