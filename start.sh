@@ -48,7 +48,7 @@ flatpak update -y
 
 sudo nala install ubuntu-restricted-extras -y
 
-sudo nala install pop-shop neofetch htop preload tlp code gnome-tweaks grub-customizer grub-efi vlc geg -y 
+sudo nala install pop-shop neofetch htop preload tlp code gnome-tweaks grub-customizer grub-efi vlc -y 
 
 flatpak install flathub com.mattjakeman.ExtensionManager com.github.carlos157oliveira.Calculus org.onlyoffice.desktopeditors -y
 
