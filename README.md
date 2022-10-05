@@ -40,17 +40,10 @@ clear && ./start.sh
 - Install .deb packages
     - htop
     - neofetch
-    - Telegram-desktop
-    - Discord
-    - Gnome Software
-    - Gnome Extensions
-    - Extension Manager
-    - qBittorrent
-    - Inkscape
-    - geg
+    - preload
+    - GNOME-TWEAKS
 - Install Flatpak packages
     - Calculus
-    - Wike
     - Extensions Manager
 - Set Up **TLP** for Battery Management.
 - Disabling the following Extensions
