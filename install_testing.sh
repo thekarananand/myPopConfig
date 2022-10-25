@@ -236,6 +236,13 @@ then
 		gsettings set org.gnome.shell.extensions.ding show-trash true
 		gsettings set org.gnome.shell.extensions.ding show-volumes true
 		
+	# Tweaking Trackpad Settings 
+		if [[ -f "$CONFIG/.LAPTOP" ]]
+		then
+			gsettings set org.gnome.desktop.peripherals.touchpad natural-scroll true
+			gsettings set org.gnome.desktop.peripherals.touchpad click-method 'areas'
+		fi
+		
 		touch $CONFIG/.BaseSystem2
 		killall -3 gnome-shell
 fi
