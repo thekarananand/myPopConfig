@@ -9,8 +9,8 @@ Just copy the following command in your Terminal.
 ```bash
 git clone https://github.com/thekarananand/myPopConfig.git
 cd myPopConfig
-chmod +x start.sh
-clear && ./start.sh
+chmod +x install.sh
+clear && ./install.sh
 ```
 
 ## Before
