@@ -2,7 +2,7 @@ clear
 
 # VARIBALES DEFINED
 
-CONFIG=/home/$USER/.config/UbuntuSpinner
+CONFIG=/home/$USER/.config/myPopConfig
 EXTENSIONS=/home/$USER/.local/share/gnome-shell/extensions
 
 # CREATING REQUIRED DIRECTORY
@@ -26,7 +26,7 @@ then
 fi
 
 # Setting-up the BASE SYSTEM
-if [[ ! -f "$CONFIG/.BaseSystem" ]]
+if [[ ! -f "$CONFIG/.BaseSystem1" ]]
 then
     # Disable Unwanted Extenstions
 
@@ -190,7 +190,7 @@ then
 		clear
 		rm null
 		
-	touch $CONFIG/.BaseSystem
+	touch $CONFIG/.BaseSystem1
 
 	zenity --info --title='myPopConfig' --text='This system needs RESTART. Press [OK] to RESTART. After the System restarts, please Re-Execute this Script...'
 	reboot
@@ -233,12 +233,11 @@ then
 		gsettings --schemadir $EXTENSIONS/just-perfection-desktop@just-perfection/schemas/ set org.gnome.shell.extensions.just-perfection clock-menu-position-offset 8
 		gsettings --schemadir $EXTENSIONS/just-perfection-desktop@just-perfection/schemas/ set org.gnome.shell.extensions.just-perfection notification-banner-position 2
 		gsettings --schemadir $EXTENSIONS/just-perfection-desktop@just-perfection/schemas/ set org.gnome.shell.extensions.just-perfection osd-position 5
-		gsettings set org.gnome.shell.extensions.ding show-home false
 		gsettings set org.gnome.shell.extensions.ding show-trash true
-		gsettings set org.gnome.shell.extensions.ding start-corner 'top-left'
 		gsettings set org.gnome.shell.extensions.ding show-volumes true
-
-	touch $CONFIG/.BaseSystem2
+		
+		touch $CONFIG/.BaseSystem2
+		killall -3 gnome-shell
 fi
 
 if [[ -f "$CONFIG/.DEFAULT" ]]
