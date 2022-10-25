@@ -31,9 +31,9 @@ then
     # Disable Unwanted Extenstions
 
 		gnome-extensions disable pop-cosmic@system76.com
-        gnome-extensions disable cosmic-dock@system76.com
-        gnome-extensions disable cosmic-workspaces@system76.com
-        gnome-extensions disable popx11gestures@system76.com
+        	gnome-extensions disable cosmic-dock@system76.com
+        	gnome-extensions disable cosmic-workspaces@system76.com
+        	gnome-extensions disable popx11gestures@system76.com
     
     # Install Pre-Req
     	
@@ -47,41 +47,37 @@ then
 		sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
 		rm -f packages.microsoft.gpg
 		
-        # Repo for JETBRAINS (UNOFFICIAL) Source : https://github.com/JonasGroeger/jetbrains-ppa/
+        	# Repo for JETBRAINS (UNOFFICIAL) Source : https://github.com/JonasGroeger/jetbrains-ppa/
 		curl -s https://s3.eu-central-1.amazonaws.com/jetbrains-ppa/0xA6E8698A.pub.asc | gpg --dearmor | sudo tee /usr/share/keyrings/jetbrains-ppa-archive-keyring.gpg > /dev/null
 		echo "deb [signed-by=/usr/share/keyrings/jetbrains-ppa-archive-keyring.gpg] http://jetbrains-ppa.s3-website.eu-central-1.amazonaws.com any main" | sudo tee /etc/apt/sources.list.d/jetbrains-ppa.list > /dev/null
 
-        # Repo for Grub Customizer
+        	# Repo for Grub Customizer
 		sudo add-apt-repository ppa:danielrichter2007/grub-customizer -y
 
-        # Repo for Flatpak
+        	# Repo for Flatpak
 		sudo add-apt-repository ppa:flatpak/stable -y  
 		
-        # Repo for Mozilla Firefox
+        	# Repo for Mozilla Firefox
 		sudo add-apt-repository ppa:mozillateam/ppa -y
 	    
-        # Repo for Android Studio
+        	# Repo for Android Studio
 		sudo add-apt-repository ppa:maarten-fonville/android-studio -y
 
-        # APT mirrors
-        sudo nala fetch --auto -y
-
-		touch $CONFIG/.APT
+    # APT mirrors
+        	sudo nala fetch --auto -y
 
     # Clean Up
 
 		sudo nala remove --purge libreoffice* gnome-weather gnome-calendar gnome-contacts totem geary seahorse -y 
-        sudo nala clean
+        	sudo nala clean
 		sudo nala autoremove -y
 		
-		touch $CONFIG/.CleanUp
 
     # Flatpak Setup
     	
-		sudo nala install flatpak -y
-    	sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+    		sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-	# Upgating Existing Packages
+    # Upgating Existing Packages
 		
 		sudo nala update
 		nala list --upgradable
@@ -90,13 +86,13 @@ then
 		sudo flatpak update -y
 
     # Base Apps
-		sudo nala install firefox vlc grub-customizer preload htop gnome-tweaks ubuntu-restricted-extras -y
-    	sudo flatpak install flathub com.mattjakeman.ExtensionManager -y
+		sudo nala install firefox vlc grub-customizer grub-efi preload htop gnome-tweaks ubuntu-restricted-extras -y
+    		sudo flatpak install flathub com.mattjakeman.ExtensionManager -y
 
     # Laptop Specific Packages & Config
 		if [[ -f "$CONFIG/.LAPTOP" ]]
 		then
-			sudo nala install tlp tlp-rdw touchegg -y 
+			sudo nala install tlp tlp-rdw -y 
 
 			sudo tlp start
 			sudo systemctl enable tlp
@@ -157,6 +153,9 @@ then
 	
     # GRUB CUSTOMIZER
 
+		sudo grub-install 
+		sudo cp /boot/grub/x86_64-efi/grub.efi /boot/efi/EFI/pop/grubx64.efi
+		
 		sudo mkdir -p "/boot/grub/themes/"
 		sudo cp -a ./grubthemes/* /boot/grub/themes/
 		
