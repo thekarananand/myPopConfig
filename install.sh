@@ -68,7 +68,7 @@ then
 
     # Clean Up
 
-		sudo nala remove --purge libreoffice* gnome-weather gnome-calendar gnome-contacts totem geary seahorse -y 
+		sudo nala remove --purge libreoffice* gnome-weather gnome-calendar gnome-contacts totem geary seahorse popsicle popsicle-gtk baobab gnome-user-docs* ubuntu-docs yelp simple-scan -y 
         	sudo nala clean
 		sudo nala autoremove -y
 		
