@@ -291,6 +291,16 @@ else
 		then
 			echo "sudo flatpak install flathub com.github.carlos157oliveira.Calculus -y" >> .AdditionalAPPS.sh
 		fi
+		
+		# Source Build
+		if zenity --question --title='Ubuntu Spinner' --text='Install Notion (Unofficial) ?'
+		then
+			echo "sudo apt install p7zip-rar -y" >> .AdditionalAPPS.sh
+			echo "wget https://raw.githubusercontent.com/puneetsl/lotion/master/setup.sh" >> .AdditionalAPPS.sh
+			echo "chmod +x ./setup.sh" >> .AdditionalAPPS.sh
+			echo "./setup.sh native" >> .AdditionalAPPS.sh
+			echo "rm ./setup.sh" >> .AdditionalAPPS.sh
+		fi
 
     	chmod +x .AdditionalAPPS.sh
     	./.AdditionalAPPS.sh
