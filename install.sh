@@ -165,10 +165,12 @@ then
 		sed -i '/GRUB_GFXMODE=/d' ./grub
 		sed -i '/GRUB_TIMEOUT=/d' ./grub
 		sed -i '/GRUB_TIMEOUT_STYLE=/d' ./grub
+		sed -i '/GRUB_THEME=/d' ./grub
 
 		echo 'GRUB_GFXMODE="auto"' >> ./grub 
 		echo 'GRUB_TIMEOUT="10"' >> ./grub
 		echo 'GRUB_TIMEOUT_STYLE="menu"' >> ./grub
+		echo 'GRUB_THEME="/boot/grub/themes/Sleek-Dark/theme.txt"' >> ./grub
 		
 		sudo mv ./grub /etc/default/
 
