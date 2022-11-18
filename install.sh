@@ -12,7 +12,7 @@ mkdir -p $CONFIG
 if [[ ! -f "$CONFIG/.PROMPTED" ]]
 then
 
-    if zenity --question --no-wrap --title='myPopConfig' --text='Do you want to Default Apps ?\n\nThis will install VSCODE + OnlyOffice + Calculus'
+    if zenity --question --no-wrap --title='myPopConfig' --text='Do you want to Default Apps ?\n\nThis will install VSCODE + OnlyOffice + Calculus + Notion (Unofficial) + WhatsApp for Linux (Unofficial)'
     then
         touch $CONFIG/.DEFAULT
     fi
@@ -249,8 +249,12 @@ fi
 
 if [[ -f "$CONFIG/.DEFAULT" ]]
 then
-    sudo nala install code
-    sudo flatpak install flathub com.github.carlos157oliveira.Calculus org.onlyoffice.desktopeditors -y
+    sudo nala install code p7zip-rar -y
+    sudo flatpak install flathub com.github.carlos157oliveira.Calculus org.onlyoffice.desktopeditors com.github.eneshecan.WhatsAppForLinux -y
+    wget https://raw.githubusercontent.com/puneetsl/lotion/master/setup.sh
+    chmod +x ./setup.sh
+    ./setup.sh native
+    rm ./setup.sh
 else
     
     # Optional Apps
@@ -292,6 +296,11 @@ else
 			echo "sudo flatpak install flathub com.github.carlos157oliveira.Calculus -y" >> .AdditionalAPPS.sh
 		fi
 		
+		if zenity --question --title='myPopConfig' --text='Install WhatsApp for Linux (Unofficial) ?'
+		then
+			echo "sudo flatpak install flathub com.github.eneshecan.WhatsAppForLinux -y" >> .AdditionalAPPS.sh
+		fi
+		
 		# Source Build
 		if zenity --question --title='Ubuntu Spinner' --text='Install Notion (Unofficial) ?'
 		then
@@ -307,5 +316,3 @@ else
 	    rm ./.AdditionalAPPS.sh
 
 fi
-
-
