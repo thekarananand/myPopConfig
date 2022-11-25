@@ -34,6 +34,12 @@ then
         	gnome-extensions disable cosmic-dock@system76.com
         	gnome-extensions disable cosmic-workspaces@system76.com
         	gnome-extensions disable popx11gestures@system76.com
+		
+    # Removing Show Applications, Show Launcher & Show Workspaces
+    		
+		sudo rm /usr/share/applications/pop-cosmic-applications.desktop
+		sudo rm /usr/share/applications/pop-cosmic-workspaces.desktop
+		sudo rm /usr/share/applications/pop-cosmic-launcher.desktop
     
     # Install Pre-Req
     	
